@@ -30,15 +30,15 @@ Durante a jornada:
 
 ## 📋 Funcionalidades
 
-- ✅ Controle point-and-click (mouse)
-- ✅ Inimigos com IA de patrulha e perseguição
-- ✅ Sistema de stealth: arbustos para esconder
-- ✅ Porta de saída desbloqueável
-- ✅ Colisão com paredes
-- ✅ Animação de jogador e inimigos
-- ✅ Efeitos sonoros e música
-- ✅ HUD informativa
-- ✅ Sistema de menus (início, vitória, derrota)
+-  Controle point-and-click (mouse)
+-  Inimigos com IA de patrulha e perseguição
+-  Sistema de stealth: arbustos para esconder
+-  Porta de saída desbloqueável
+-  Colisão com paredes
+-  Animação de jogador e inimigos
+-  Efeitos sonoros e música
+-  HUD informativa
+-  Sistema de menus (início, vitória, derrota)
 
 ---
 
