@@ -218,8 +218,13 @@ class Enemy:
     def draw(self, screen):
         anim_key = f"{self.state}_down"
         current_anim = self.images.get(anim_key, [])
-        if current_anim:
-            screen.blit(current_anim[self.frame_index], self.pos)
+        if not current_anim:
+            return
+
+        # garante índice válido sempre
+        idx = int(self.frame_index) % len(current_anim)
+        screen.blit(current_anim[idx], self.pos)
+
 
 
 class Wall:
