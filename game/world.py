@@ -80,7 +80,7 @@ class Game:
 
     def toggle_audio(self):
         self.music_on = not self.music_on
-        
+        self.sfx_on = self.music_on
         self.buttons = build_menu_buttons(self.start_game, self.toggle_audio, self.exit_game, self.music_on)
 
 
