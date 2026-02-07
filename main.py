@@ -1,9 +1,8 @@
 import random
 import math
 from pygame import Rect
-import os
 
-os.environ['SDL_VIDEO_CENTERED'] = '1'  # Centraliza a janela do jogo
+
 
 
 STATE_MENU = "menu"
