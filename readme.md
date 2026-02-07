@@ -1,10 +1,10 @@
-# 🕹️ Temple Escape
+#  Temple Escape
 
 **Temple Escape** é um jogo de aventura **point-and-click** com visão top-down, desenvolvido com **Python + PgZero**. O jogador deve coletar relíquias, evitar inimigos e escapar da caverna usando estratégia e stealth.
 
 ---
 
-## 📌 Objetivo do Jogo
+##  Objetivo do Jogo
 
 Você está preso em uma caverna escura e precisa encontrar **3 relíquias antigas** para abrir a **porta de saída** e escapar.
 
@@ -16,7 +16,7 @@ Durante a jornada:
 
 ---
 
-## 🎮 Como Jogar
+##  Como Jogar
 
 | Ação                  | Como fazer                             |
 |-----------------------|-----------------------------------------|
@@ -42,7 +42,7 @@ Durante a jornada:
 
 ---
 
-## 🧠 Estrutura do Código
+##  Estrutura do Código
 
 ### `MAP_GRID`
 
@@ -92,7 +92,7 @@ MAP_GRID[9][2] = "P"  # Jogador
 
 ---
 
-## 🖼️ Assets
+##  Assets
 
 **Imagens esperadas (na pasta `/images`):**
 
@@ -136,7 +136,7 @@ pgzrun main.py
 
 ---
 
-## 📦 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 TempleEscape/
@@ -156,7 +156,7 @@ TempleEscape/
 
 ---
 
-## 📈 Progresso Atual
+##  Progresso Atual
 
 * [x] Sistema de mapas com grid
 * [x] IA de patrulha e perseguição
@@ -168,7 +168,7 @@ TempleEscape/
 
 ---
 
-## 🧠 Créditos
+##  Créditos
 
 Desenvolvido por: **Dilvonei Lacerda**
 
