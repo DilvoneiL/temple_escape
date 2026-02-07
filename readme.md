@@ -1,4 +1,3 @@
-````markdown
 # 🕹️ Temple Escape
 
 **Temple Escape** é um jogo de aventura **point-and-click** com visão top-down, desenvolvido com **Python + PgZero**. O jogador deve coletar relíquias, evitar inimigos e escapar da caverna usando estratégia e stealth.
