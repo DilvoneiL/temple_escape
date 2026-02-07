@@ -425,7 +425,7 @@ class Enemy:
 
         self.frame_timer += dt
         current_anim = self.images.get("walk_down", [])
-        if current_anim and self.frame_timer >= 1:
+        if current_anim and self.frame_timer >= self.anim_speed:
             self.frame_timer = 0
             self.frame_index = (self.frame_index + 1) % len(current_anim)
     def draw(self):
@@ -553,7 +553,7 @@ def update(dt):
             relic.check_collision(player_rect)
         
         for enemy in enemies:
-            enemy.update(dt, player.pos, walls, bushes, player_hidden = player.hidden)  # Ajuste se bush estiver presente
+            enemy.update(dt, player.pos, walls, bushes, player_hidden = player.hidden)
             if enemy.get_rect().colliderect(player_rect):
                 game_state = STATE_GAME_OVER
                 if sfx_on:
