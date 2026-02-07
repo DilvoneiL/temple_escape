@@ -80,17 +80,7 @@ class Game:
 
     def toggle_audio(self):
         self.music_on = not self.music_on
-
-        # liga/desliga música (use o mesmo nome do arquivo que você usa no update: "bgm")
-        try:
-            if self.music_on:
-                music.play("bgm")
-            else:
-                music.stop()
-        except:
-            pass
-
-        # recria os botões para atualizar o texto (passando o estado)
+        
         self.buttons = build_menu_buttons(self.start_game, self.toggle_audio, self.exit_game, self.music_on)
 
 
