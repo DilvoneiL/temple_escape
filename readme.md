@@ -141,6 +141,13 @@ pgzrun main.py
 ```
 TempleEscape/
 ├── main.py
+├── games
+│   ├── _init_.py
+│   ├── constant.py
+│   └── entities.py
+│   ├── map_data.py
+│   ├── ui.py
+│   └── world.py
 ├── images/
 │   ├── wall.png
 │   ├── ground.png
