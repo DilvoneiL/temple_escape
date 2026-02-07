@@ -168,6 +168,4 @@ Desenvolvido por: **Dilvonei Lacerda**
 
 Tecnologia: [PgZero](https://pygame-zero.readthedocs.io)
 
----
 
-```
