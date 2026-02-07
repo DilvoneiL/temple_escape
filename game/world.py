@@ -27,7 +27,13 @@ class Game:
         self.door = None
         self.player = None
 
-        self.buttons = build_menu_buttons(self.start_game, self.toggle_audio, self.exit_game)
+        self.buttons = build_menu_buttons(
+            self.start_game,
+            self.toggle_audio,
+            self.exit_game,
+            self.music_on
+        )
+
         self.end_buttons = build_end_buttons(self.play_again, self.back_to_menu, self.exit_game)
 
     # ----------------
@@ -74,7 +80,20 @@ class Game:
 
     def toggle_audio(self):
         self.music_on = not self.music_on
-        self.sfx_on = not self.sfx_on
+
+        # liga/desliga música (use o mesmo nome do arquivo que você usa no update: "bgm")
+        try:
+            if self.music_on:
+                music.play("bgm")
+            else:
+                music.stop()
+        except:
+            pass
+
+        # recria os botões para atualizar o texto (passando o estado)
+        self.buttons = build_menu_buttons(self.start_game, self.toggle_audio, self.exit_game, self.music_on)
+
+
 
     def exit_game(self):
         exit()
@@ -219,13 +238,16 @@ class Game:
 
         if self.game_state == STATE_MENU:
             for b in self.buttons:
+                b.update_hover(pos)  # garante hover correto no clique
                 b.click()
             return
 
         if self.game_state in (STATE_GAME_OVER, STATE_WIN):
             for b in self.end_buttons:
+                b.update_hover(pos)
                 b.click()
             return
 
         if self.game_state == STATE_PLAYING:
             self.player.dest = [pos[0] - 48, pos[1] - 48]
+
