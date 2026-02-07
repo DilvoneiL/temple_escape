@@ -1,6 +1,7 @@
-# 🕹️ Temple Escape 
+````markdown
+# 🕹️ Temple Escape
 
-**Temple Escape ** é um jogo de aventura **point-and-click** com visão top-down, desenvolvido com **Python + PgZero**. O jogador deve coletar relíquias, evitar inimigos e escapar da caverna usando estratégia e stealth.
+**Temple Escape** é um jogo de aventura **point-and-click** com visão top-down, desenvolvido com **Python + PgZero**. O jogador deve coletar relíquias, evitar inimigos e escapar da caverna usando estratégia e stealth.
 
 ---
 
@@ -9,6 +10,7 @@
 Você está preso em uma caverna escura e precisa encontrar **3 relíquias antigas** para abrir a **porta de saída** e escapar.
 
 Durante a jornada:
+
 - **Inimigos patrulham** áreas e vão te perseguir se te virem.
 - Você pode se **esconder em arbustos (bushes)** para evitar ser detectado.
 - O jogo é controlado **apenas com o mouse**.
@@ -17,13 +19,13 @@ Durante a jornada:
 
 ## 🎮 Como Jogar
 
-| Ação                    | Como fazer                            |
-|-------------------------|----------------------------------------|
-| **Mover o jogador**     | Clique com o mouse no destino desejado |
-| **Coletar relíquias**   | Encoste na relíquia                   |
-| **Esconder-se**         | Vá até um arbusto                     |
-| **Evitar inimigos**     | Fuja do campo de visão ou esconda-se  |
-| **Sair da caverna**     | Recolha 3 relíquias e vá até a porta  |
+| Ação                  | Como fazer                             |
+|-----------------------|-----------------------------------------|
+| **Mover o jogador**   | Clique com o mouse no destino desejado  |
+| **Coletar relíquias** | Encoste na relíquia                     |
+| **Esconder-se**       | Vá até um arbusto                       |
+| **Evitar inimigos**   | Fuja do campo de visão ou esconda-se    |
+| **Sair da caverna**   | Recolha 3 relíquias e vá até a porta    |
 
 ---
 
@@ -44,19 +46,23 @@ Durante a jornada:
 ## 🧠 Estrutura do Código
 
 ### `MAP_GRID`
+
 - Mapa 2D definido por uma **grade de tiles 30x20**.
 - Cada célula define o tipo de tile: parede, chão, arbusto, inimigo, relíquia, etc.
 - Exemplo:
-  ```python
-  MAP_GRID[6][8] = "R"  # Relíquia na posição (8,6)
-  MAP_GRID[4][6] = "E"  # Inimigo
-  MAP_GRID[9][2] = "P"  # Jogador
+
+```python
+MAP_GRID[6][8] = "R"  # Relíquia na posição (8,6)
+MAP_GRID[4][6] = "E"  # Inimigo
+MAP_GRID[9][2] = "P"  # Jogador
 ````
 
 ### `load_map()`
 
 * Lê o `MAP_GRID` e instancia todos os objetos do jogo (parede, player, inimigos, etc).
 * Garante que todos os tiles tenham um **chão (`ground`)**.
+
+---
 
 ### Principais Classes
 
@@ -69,7 +75,7 @@ Durante a jornada:
 
 * Possui 2 modos: `patrol` (andar entre dois pontos) e `hunt` (perseguir jogador).
 * Evita obstáculos como paredes e arbustos.
-* Muda de direção ao colidir com parede ou chegar no fim da rota.
+* Muda de direção ao colidir com parede ou ao chegar no fim da rota.
 
 #### `Wall` e `Bush`
 
@@ -89,7 +95,7 @@ Durante a jornada:
 
 ## 🖼️ Assets
 
-Imagens esperadas (na pasta `/images`):
+**Imagens esperadas (na pasta `/images`):**
 
 * `wall.png` – parede
 * `ground.png` – piso base
@@ -101,14 +107,14 @@ Imagens esperadas (na pasta `/images`):
 * `orc_walk_00.png` até `orc_walk_06.png`
 * `orc_idle_00.png` até `orc_idle_04.png`
 
-Sons esperados (na pasta `/sounds`):
+**Sons esperados (na pasta `/sounds`):**
 
 * `pickup.ogg` – coletar relíquia
 * `door.ogg` – abrir porta
 * `hit.ogg` – ser pego por inimigo
 * `hide.ogg` – entrar no arbusto
 
-Música (na pasta `/music`):
+**Música (na pasta `/music`):**
 
 * `bgm.ogg`
 
@@ -119,21 +125,22 @@ Música (na pasta `/music`):
 * Python 3.10+ (recomendado)
 * PgZero instalado:
 
-  ```bash
-  pip install pgzero
-  ```
+```bash
+pip install pgzero
+```
+
 * Execute o jogo com:
 
-  ```bash
-  pgzrun main.py
-  ```
+```bash
+pgzrun main.py
+```
 
 ---
 
 ## 📦 Estrutura do Projeto
 
 ```
-Escape-from-the-Dark-Cave/
+TempleEscape/
 ├── main.py
 ├── images/
 │   ├── wall.png
@@ -150,7 +157,7 @@ Escape-from-the-Dark-Cave/
 
 ---
 
-## 📈 Progresso atual
+## 📈 Progresso Atual
 
 * [x] Sistema de mapas com grid
 * [x] IA de patrulha e perseguição
@@ -168,4 +175,6 @@ Desenvolvido por: **Dilvonei Lacerda**
 
 Tecnologia: [PgZero](https://pygame-zero.readthedocs.io)
 
+---
 
+```
